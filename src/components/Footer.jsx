@@ -8,31 +8,33 @@ const Footer = () => {
   const history = useHistory();
   return (
     <div className="w-full pt-[50px] pb-[30px] h-auto bg-footerBackground">
-      <div className="w-[90%] pb-[20px]  mx-auto flex justify-between">
-        <div className="w-[300px]">
-          <div className="h-[30px] font-[700] text-[25px] my-4">E-commerce</div>
-          <p className="text-[14px] font-[400] my-4">
+      <div className="w-[90%] pb-[20px]  mx-auto flex flex-wrap justify-between">
+        <div className="md:w-[300px] w-[100%] ">
+          <div className="h-[30px] font-[700] md:text-[25px] text-[20px] md:my-4 my-3">
+            E-commerce
+          </div>
+          <p className="text-[14px] font-[400] md:my-4 my-3 md:pr-0 pr-12">
             Lorem ipsum dolor sit amet consectetur. Ut nulla facilisi at et.
           </p>
           <div className="flex justify-start gap-4 items-center my-4">
-            <div className="w-[38px] h-[38px] flex justify-center items-center rounded-[100%] bg-white">
+            <div className="md:w-[38px] w-[33px] md:h-[38px] h-[33px] flex justify-center items-center rounded-[100%] bg-white">
               <img
                 src={instagram}
-                className="w-[24px] object-contain"
+                className="md:w-[24px] w-[21px] object-contain"
                 alt="instagram"
               />
             </div>
-            <div className="w-[38px] h-[38px] flex justify-center items-center rounded-[100%] bg-white">
+            <div className="md:w-[38px] w-[33px] md:h-[38px] h-[33px] flex justify-center items-center rounded-[100%] bg-white">
               <img
                 src={tiktok}
-                className="w-[24px] object-contain"
+                className="md:w-[24px] w-[21px] object-contain"
                 alt="tiktok"
               />
             </div>
-            <div className="w-[38px] h-[38px] flex justify-center items-center rounded-[100%] bg-white">
+            <div className="md:w-[38px] w-[33px] md:h-[38px] h-[33px] flex justify-center items-center rounded-[100%] bg-white">
               <img
                 src={telegram}
-                className="w-[24px] object-contain"
+                className="md:w-[24px] w-[21px] object-contain"
                 alt="telegram"
               />
             </div>
@@ -92,11 +94,11 @@ const Footer = () => {
         </div>
       </div>
       <hr className="w-[90%] mx-auto" />
-      <div className="w-[90%] mx-auto pt-5 flex justify-between items-center">
-        <div className="text-[14px] font-[400] text-[#989898]">
+      <div className="w-[90%] mx-auto pt-5 flex md:flex-nowrap flex-wrap justify-center md:justify-between items-center">
+        <div className="md:text-[14px] text-[12px] font-[400] text-[#989898]">
           Made by sanlymerkez
         </div>
-        <div className="text-[14px] font-[400] text-[#989898]">
+        <div className="md:text-[14px] text-[12px] font-[400] text-[#989898]">
           © 2023 ecommerce.com. Ähli hukuklary goraglydyr.
         </div>
       </div>

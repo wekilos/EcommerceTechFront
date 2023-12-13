@@ -8,14 +8,14 @@ import ru from "../../lang/ru/home.json";
 import { BASE_URL } from "../../utils/axiosIntance";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
-const CategoryCard = (props) => {
+const BrandCard = (props) => {
   const history = useHistory();
   const { dil } = useContext(Context);
   return (
     <div
       onClick={() =>
         history.push({
-          pathname: "/category/" + props.data.id,
+          pathname: "/brand/" + props.data.id,
         })
       }
       className="cursor-pointer w-fit"
@@ -39,4 +39,4 @@ const CategoryCard = (props) => {
   );
 };
 
-export default CategoryCard;
+export default BrandCard;

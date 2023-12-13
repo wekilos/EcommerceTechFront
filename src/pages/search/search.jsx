@@ -7,16 +7,17 @@ import {
 } from "@ant-design/icons";
 import { Drawer } from "antd";
 import CardCategory from "../../components/cardCategoryPage";
-import { useHistory, useParams } from "react-router-dom";
+import { useHistory, useParams, useLocation } from "react-router-dom";
 import checkbox from "../../images/checkbox.svg";
 import checkboxborder from "../../images/checkboxborder.svg";
 import { Context } from "../../context/context";
 import { axiosInstance } from "../../utils/axiosIntance";
 
-const Category = (props) => {
+const Search = (props) => {
   const history = useHistory();
   const { dil } = useContext(Context);
-  const { id } = useParams();
+  const path = useLocation();
+  const { id, search } = useParams();
   const [brands, setBrands] = useState([]);
   const [categories, setCategories] = useState([]);
   const [category, setCategory] = useState({});
@@ -34,11 +35,12 @@ const Category = (props) => {
   });
   const [filter, setFilter] = useState({
     // CategoryId: id,
-    CategoryIds: [id],
+    CategoryIds: [id?.slice(3) != "0" ? id?.slice(3) : 0],
     BrandIds: [],
     order: 5,
     startPrice: 0,
     endPrice: 10000,
+    name: search.slice(2),
     limit: 10,
     page: 0,
   });
@@ -50,10 +52,23 @@ const Category = (props) => {
 
   useEffect(() => {
     getProducts();
-    console.log("filter", filter);
-  }, [filter]);
+  }, [filter, path]);
+  useEffect(() => {
+    setFilter({
+      // CategoryId: id,
+      CategoryIds: [id?.slice(3) != "0" ? id?.slice(3) : 0],
+      BrandIds: [],
+      order: 5,
+      startPrice: 0,
+      endPrice: 10000,
+      name: search.slice(2),
+      limit: 10,
+      page: 0,
+    });
+  }, [path]);
 
   const getProducts = () => {
+    console.log("done filter", filter);
     axiosInstance
       .get("/api/product/all", {
         params: filter,
@@ -81,10 +96,6 @@ const Category = (props) => {
       .get("/api/category/all")
       .then((data) => {
         console.log(data.data);
-        let cat = data.data.filter((item) => {
-          return item.id == id;
-        });
-        cat.length > 0 && setCategory(cat[0]);
         setCategories(data.data);
       })
       .catch((err) => [console.log(err)]);
@@ -147,9 +158,10 @@ const Category = (props) => {
   const clearFilter = () => {
     setFilter({
       // CategoryId: id,
-      CategoryIds: [id],
+      CategoryIds: [id?.slice(3) != "0" ? id?.slice(3) : 0],
       BrandIds: [],
       order: 5,
+      name: search.slice(2),
       startPrice: 0,
       endPrice: 10000,
       limit: 10,
@@ -694,4 +706,4 @@ const Category = (props) => {
   );
 };
 
-export default Category;
+export default Search;

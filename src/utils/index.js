@@ -10,8 +10,9 @@ export const isLogin = () => {
     } else {
       return false;
     }
+  } else {
+    return false;
   }
-  return false;
 };
 
 export const isLoginAdmin = () => {

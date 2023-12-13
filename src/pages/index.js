@@ -2,6 +2,8 @@ import { lazy } from "react";
 export const Home = lazy(() => import("./home/Home"));
 export const Product = lazy(() => import("./products/product"));
 export const Category = lazy(() => import("./category/category"));
+export const Brand = lazy(() => import("./brand/brand"));
+export const Search = lazy(() => import("./search/search"));
 export const Basket = lazy(() => import("./basket/basket"));
 export const Order = lazy(() => import("./basket/order"));
 export const OrderDone = lazy(() => import("./basket/orderdone"));

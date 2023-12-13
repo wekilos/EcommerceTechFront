@@ -20,6 +20,8 @@ import {
   Privacy,
   Sequrity,
   OrderInfo,
+  Brand,
+  Search,
 } from "../pages/index";
 
 import ScrollIntoView from "./ScrollIntoView";
@@ -41,6 +43,19 @@ const App = () => {
             />
             <PublicRoute
               restricted={true}
+              component={Home}
+              path="/login"
+              exact
+            />
+            <PublicRoute
+              restricted={true}
+              component={Home}
+              path="/sign"
+              exact
+            />
+
+            <PublicRoute
+              restricted={true}
               component={Product}
               path="/product/:id"
               exact
@@ -49,6 +64,19 @@ const App = () => {
               restricted={true}
               component={Category}
               path="/category/:id"
+              exact
+            />
+            <PublicRoute
+              restricted={true}
+              component={Brand}
+              path="/brand/:id"
+              exact
+            />
+
+            <PublicRoute
+              restricted={true}
+              component={Search}
+              path="/search/:id/:search"
               exact
             />
             <PublicRoute
@@ -66,28 +94,28 @@ const App = () => {
             <PublicRoute
               restricted={true}
               component={OrderDone}
-              path="/orderdone"
+              path="/orderdone/:code"
               exact
             />
-            <PublicRoute
+            <PrivateRoute
               restricted={true}
               component={Favorites}
               path="/favorites"
               exact
             />
-            <PublicRoute
+            <PrivateRoute
               restricted={true}
               component={Profile}
               path="/profile"
               exact
             />
-            <PublicRoute
+            <PrivateRoute
               restricted={true}
               component={Orders}
               path="/orders"
               exact
             />
-            <PublicRoute
+            <PrivateRoute
               restricted={true}
               component={OrdersDetails}
               path="/orders/:id"
@@ -117,7 +145,7 @@ const App = () => {
               path="/sequrity"
               exact
             />
-            <PublicRoute
+            <PrivateRoute
               restricted={true}
               component={OrderInfo}
               path="/orderinfo"

@@ -1,8 +1,8 @@
 import React, { Suspense } from "react";
 import { Route, useHistory } from "react-router-dom";
-import { isLoginAdmin } from "../utils";
+import { isLogin } from "../utils/index";
 import PageLoading from "../components/PageLoading";
-import { Login } from "../pages/index";
+import { Home } from "../pages/index";
 
 const Headers = React.lazy(() => import("../components/Header"));
 const Footer = React.lazy(() => import("../components/Footer"));
@@ -13,7 +13,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
     <Route
       {...rest}
       render={(props) =>
-        isLoginAdmin() || true ? (
+        isLogin() ? (
           <div>
             <Suspense fallback={<PageLoading />}>
               <Headers />
@@ -34,8 +34,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
             </Suspense>
           </div>
         ) : (
-          <Route component={Login} />
-          // history.push({ pathname: "/login" })
+          history.push({ pathname: "/login" })
         )
       }
     />

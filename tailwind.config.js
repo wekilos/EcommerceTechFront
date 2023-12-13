@@ -30,6 +30,9 @@ module.exports = {
         background: "rgba(242, 245, 249 ,1)",
         footerBackground: "#F9F9F9",
         whitetext: "#E4E4E4",
+        yellow: "#FFA826",
+        green: "#37C760",
+        red: "#F14343",
       },
       fontSize: {
         xsm: ".813rem",

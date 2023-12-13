@@ -26,16 +26,16 @@ const Category = (props) => {
   const sortRef = useRef(null);
   const sortRefMobile = useRef(null);
   const [filterOpen, setFilterOpen] = useState({
-    category: true,
-    brand: false,
+    category: false,
+    brand: true,
     price: true,
     start: 0,
     end: 10000,
   });
   const [filter, setFilter] = useState({
     // CategoryId: id,
-    CategoryIds: [id],
-    BrandIds: [],
+    CategoryIds: [],
+    BrandIds: [id],
     order: 5,
     startPrice: 0,
     endPrice: 10000,
