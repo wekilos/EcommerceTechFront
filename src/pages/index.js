@@ -18,3 +18,6 @@ export const Delivery = lazy(() => import("./about/delivery"));
 export const Privacy = lazy(() => import("./about/privacy"));
 export const Sequrity = lazy(() => import("./about/sequrity"));
 export const OrderInfo = lazy(() => import("./about/orderinfo"));
+export const Compare = lazy(() => import("./compare/compare"));
+export const ComparePro = lazy(() => import("./compare/comparePro"));
+export const CompareAll = lazy(() => import("./compare/compareAll"));

@@ -22,6 +22,9 @@ import {
   OrderInfo,
   Brand,
   Search,
+  Compare,
+  ComparePro,
+  CompareAll,
 } from "../pages/index";
 
 import ScrollIntoView from "./ScrollIntoView";
@@ -161,6 +164,24 @@ const App = () => {
               restricted={true}
               component={Question}
               path="/question"
+              exact
+            />
+            <PublicRoute
+              restricted={true}
+              component={Compare}
+              path="/compare"
+              exact
+            />
+            <PublicRoute
+              restricted={true}
+              component={ComparePro}
+              path="/compare/:pro1/:pro2/:pro3"
+              exact
+            />
+            <PublicRoute
+              restricted={true}
+              component={CompareAll}
+              path="/compareAll/:pro1/:pro2/:pro3"
               exact
             />
             {/* Global */}

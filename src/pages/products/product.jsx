@@ -13,6 +13,7 @@ import { useHistory, useParams } from "react-router-dom";
 import { BASE_URL, axiosInstance } from "../../utils/axiosIntance";
 import { Context } from "../../context/context";
 import { message } from "antd";
+import Compare from "../../components/compare";
 
 const Product = () => {
   const history = useHistory();
@@ -413,6 +414,9 @@ const Product = () => {
         <hr className="bg-footerBackground text-footerBackground text-[1px]" /> */}
       </div>
 
+      <div className="w-full my-8">
+        <Compare ProductId={id} />
+      </div>
       <div className="w-full py-4 pb-8">
         {similar.length > 1 && (
           <div className="w-full flex mt-8 my-6 justify-between items-center">
