@@ -6,6 +6,7 @@ import { Context } from "../../context/context";
 import { BASE_URL, axiosInstance } from "../../utils/axiosIntance";
 import Card from "../../components/card";
 import Compare from "../../components/compareAll";
+import lang from "../../lang/home.json";
 
 const ComparePro = () => {
   const history = useHistory();

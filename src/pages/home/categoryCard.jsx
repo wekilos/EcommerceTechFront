@@ -2,9 +2,7 @@ import React, { useContext } from "react";
 import { useHistory } from "react-router-dom";
 
 import { Context } from "../../context/context";
-import tm from "../../lang/tm/home.json";
-import en from "../../lang/en/home.json";
-import ru from "../../lang/ru/home.json";
+import lang from "../../lang/home.json";
 import { BASE_URL } from "../../utils/axiosIntance";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 

@@ -7,6 +7,7 @@ import {
   ArrowLeftOutlined,
 } from "@ant-design/icons";
 import { Modal } from "antd";
+import lang from "../../lang/home.json";
 import { useHistory, useLocation, useParams } from "react-router-dom";
 import user1 from "../../images/user.svg";
 import favarite from "../../images/favarite.svg";

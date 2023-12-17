@@ -6,6 +6,7 @@ import {
   MinusOutlined,
 } from "@ant-design/icons";
 import { Modal, message } from "antd";
+import lang from "../../lang/home.json";
 import { useHistory, useLocation } from "react-router-dom";
 import user1 from "../../images/user.svg";
 import favarite from "../../images/favarite.svg";

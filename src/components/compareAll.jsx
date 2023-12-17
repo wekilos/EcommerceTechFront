@@ -9,6 +9,7 @@ import {
   LeftOutlined,
   MinusOutlined,
 } from "@ant-design/icons";
+import lang from "../lang/home.json";
 
 const Compare = (props) => {
   const [data, setData] = useState([]);
@@ -261,7 +262,7 @@ const Compare = (props) => {
         ) : (
           <div
             onClick={() => goToComparePro()}
-            className="h-[300px] cursor-pointer flex justify-center items-center border-[#E2E2E2] border-[1px] w-[300px] rounded-[6px]"
+            className="h-[150px] md:h-[300px] cursor-pointer flex justify-center items-center border-[#E2E2E2] border-[1px] min-w-[100px] w-[100px] md:w-[300px] rounded-[6px]"
           >
             <PlusOutlined className="text-[22px]" />
           </div>
@@ -423,7 +424,7 @@ const Compare = (props) => {
         ) : (
           <div
             onClick={() => goToComparePro()}
-            className="h-[300px] cursor-pointer flex justify-center items-center border-[#E2E2E2] border-[1px] w-[300px] rounded-[6px]"
+            className="h-[150px] md:h-[300px] cursor-pointer flex justify-center items-center border-[#E2E2E2] border-[1px] w-[100px] min-w-[100px] md:w-[300px] rounded-[6px]"
           >
             <PlusOutlined className="text-[22px]" />
           </div>
@@ -588,7 +589,7 @@ const Compare = (props) => {
         ) : (
           <div
             onClick={() => goToComparePro()}
-            className="h-[300px] cursor-pointer md:flex hidden   justify-center items-center border-[#E2E2E2] border-[1px] w-[300px] rounded-[6px]"
+            className="h-[150px] md:h-[300px] cursor-pointer md:flex hidden   justify-center items-center border-[#E2E2E2] border-[1px] w-[100px] md:w-[300px] rounded-[6px]"
           >
             <PlusOutlined className="text-[22px]" />
           </div>

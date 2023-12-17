@@ -5,6 +5,7 @@ import { BASE_URL } from "../utils/axiosIntance";
 import { useHistory } from "react-router-dom";
 import { MinusOutlined, PlusOutlined } from "@ant-design/icons";
 import Delete from "../images/delete.svg";
+import lang from "../lang/home.json";
 import product from "../images/product.png";
 import { Context } from "../context/context";
 import { message } from "antd";
@@ -54,7 +55,7 @@ const BasketCard = (props) => {
               : props?.data?.pro?.name_en}
           </p>
           <p className="text-[12px] md:text-[16px] w-full text-[#868686] m-0 font-[400]  line-clamp-1 md:line-clamp-2">
-            Reňk: Gara
+            {lang[dil].color}: Gara
           </p>
         </div>
 
@@ -73,7 +74,7 @@ const BasketCard = (props) => {
                   setCount(count + 1);
                   incPro(props?.data?.ProductId);
                 } else {
-                  message.warning("Stockda ýok!");
+                  message.warning(lang[dil]["Stockda ýok!"]);
                 }
               }}
             />
@@ -111,7 +112,7 @@ const BasketCard = (props) => {
             className="w-[14px] md:w-[18px] object-contain"
             alt=""
           />
-          Aýyr
+          {lang[dil].cancel}
         </div>
         <div className=" w-[30%] text-[14px] whitespace-nowrap md:text-[16px] flex md:hidden items-center font-[700]">
           {props?.data?.pro?.is_discount

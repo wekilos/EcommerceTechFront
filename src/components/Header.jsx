@@ -10,6 +10,7 @@ import favarite from "../images/favarite.svg";
 import search from "../images/search.svg";
 import basket from "../images/basket.svg";
 import { axiosInstance } from "../utils/axiosIntance";
+import lang from "../lang/home.json";
 
 const Header = () => {
   const history = useHistory();
@@ -122,17 +123,17 @@ const Header = () => {
   const getCategories = () => {
     axiosInstance
       .get("/api/category/all")
-      .then((data) => {
+      .then(async (data) => {
         console.log(data.data);
-        setCategories(data.data);
+        await setCategories(data.data);
         if (path.pathname.match("/search")) {
-          let array = path.pathname.split("/");
-          let data2 = array[array.length - 2];
+          let array = await path.pathname.split("/");
+          let data2 = await array[array.length - 2];
           console.log("header id", data2.slice(3));
-          let cat = data.data.filter((item) => {
+          let cat = await data.data.filter((item) => {
             return item.id == data2.slice(3);
           });
-          setFilter({
+          await setFilter({
             ...filter,
             category: path.pathname.match("/search") ? cat[0] : null,
           });

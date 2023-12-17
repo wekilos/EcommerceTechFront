@@ -4,6 +4,7 @@ import instagram from "../images/instagram.svg";
 import tiktok from "../images/tiktok.svg";
 import telegram from "../images/telegram.svg";
 import { useHistory } from "react-router-dom";
+import lang from "../lang/home.json";
 const Footer = () => {
   const history = useHistory();
   return (

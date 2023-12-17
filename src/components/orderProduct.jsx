@@ -7,6 +7,7 @@ import { MinusOutlined, PlusOutlined } from "@ant-design/icons";
 import Delete from "../images/delete.svg";
 import product from "../images/product.png";
 import { Context } from "../context/context";
+import lang from "../lang/home.json";
 
 const OrderProduct = (props) => {
   const history = useHistory();

@@ -11,6 +11,7 @@ import banner1 from "../../images/banner1.png";
 import bannerBig from "../../images/bannerBig.png";
 import { BASE_URL, axiosInstance } from "../../utils/axiosIntance";
 import { Context } from "../../context/context";
+import lang from "../../lang/home.json";
 
 const Home = () => {
   const history = useHistory();

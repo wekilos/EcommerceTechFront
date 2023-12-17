@@ -6,6 +6,7 @@ import {
   MinusOutlined,
 } from "@ant-design/icons";
 import save from "../../images/save.svg";
+import lang from "../../lang/home.json";
 import check from "../../images/check.svg";
 import basketwhite from "../../images/basketwhite.svg";
 import Card from "../../components/card";

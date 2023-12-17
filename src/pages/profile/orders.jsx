@@ -6,6 +6,7 @@ import {
   MinusOutlined,
 } from "@ant-design/icons";
 import { Modal } from "antd";
+import lang from "../../lang/home.json";
 import { useHistory, useLocation } from "react-router-dom";
 import user from "../../images/user.svg";
 import favarite from "../../images/favarite.svg";
@@ -106,7 +107,7 @@ const Orders = (props) => {
         </div>
       </Modal>
       <div className="w-full flex pb-12 md:flex-nowrap flex-wrap  justify-start md:gap-12 gap-3">
-        <div className="w-full md:min-w-[235px] h-fit cursor-pointer rounded-[20px] md:p-4 p-2 border-[1px] border-[#E2E2E2]">
+        <div className="w-full md:min-w-[235px] md:w-[235px] h-fit cursor-pointer rounded-[20px] md:p-4 p-2 border-[1px] border-[#E2E2E2]">
           <div
             onClick={() => history.push({ pathname: "/profile" })}
             className={

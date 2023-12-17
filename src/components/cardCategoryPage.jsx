@@ -4,6 +4,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import { BASE_URL } from "../utils/axiosIntance";
 import { useHistory } from "react-router-dom";
 import { Context } from "../context/context";
+import lang from "../lang/home.json";
 
 const CardCategory = (props) => {
   const history = useHistory();

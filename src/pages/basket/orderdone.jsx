@@ -5,6 +5,7 @@ import {
   UpOutlined,
   MinusOutlined,
 } from "@ant-design/icons";
+import lang from "../../lang/home.json";
 import { useHistory, useParams } from "react-router-dom";
 import orderdone from "../../images/orderdone.svg";
 import Card from "../../components/card";

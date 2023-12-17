@@ -6,6 +6,7 @@ import {
   MinusOutlined,
 } from "@ant-design/icons";
 import { Drawer } from "antd";
+import lang from "../../lang/home.json";
 import CardCategory from "../../components/cardCategoryPage";
 import { useHistory, useParams, useLocation } from "react-router-dom";
 import checkbox from "../../images/checkbox.svg";

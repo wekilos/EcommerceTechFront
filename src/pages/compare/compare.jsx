@@ -5,6 +5,7 @@ import { useHistory } from "react-router-dom";
 import { Context } from "../../context/context";
 import { BASE_URL, axiosInstance } from "../../utils/axiosIntance";
 import Card from "../../components/card";
+import lang from "../../lang/home.json";
 
 const Compare = () => {
   const history = useHistory();

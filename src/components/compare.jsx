@@ -8,6 +8,7 @@ import {
   LeftOutlined,
   MinusOutlined,
 } from "@ant-design/icons";
+import lang from "../lang/home.json";
 
 const Compare = (props) => {
   const [data, setData] = useState({});

@@ -3,9 +3,8 @@ import { useHistory, useParams } from "react-router-dom";
 import "./verification.css";
 
 import { Context } from "../../context/context";
-import tm from "../../lang/tm/home.json";
-import en from "../../lang/en/home.json";
-import ru from "../../lang/ru/home.json";
+
+import lang from "../../lang/home.json";
 import { axiosInstance } from "../../utils/axiosIntance";
 
 const Verification = () => {

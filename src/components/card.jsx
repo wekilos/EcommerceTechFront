@@ -8,6 +8,8 @@ import { useHistory, useParams, useLocation } from "react-router-dom";
 import product2 from "../images/product2.svg";
 import { Context } from "../context/context";
 import { message } from "antd";
+import lang from "../lang/home.json";
+
 const Card = (props) => {
   const history = useHistory();
   const { dil } = useContext(Context);

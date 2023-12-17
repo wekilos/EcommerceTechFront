@@ -1,6 +1,7 @@
 import { message } from "antd";
 import React from "react";
 import { useHistory } from "react-router-dom";
+import lang from "../lang/home.json";
 const OrderCard = (props) => {
   const history = useHistory();
   const market = JSON.parse(localStorage.getItem("market"));

@@ -7,6 +7,7 @@ import {
   ArrowLeftOutlined,
 } from "@ant-design/icons";
 import { Modal } from "antd";
+import lang from "../../lang/home.json";
 import { useHistory, useLocation } from "react-router-dom";
 import user from "../../images/user.svg";
 import favarite from "../../images/favarite.svg";
@@ -31,26 +32,28 @@ const Question = (props) => {
   });
   return (
     <div className="w-full pb-12">
-      <div className="w-full flex justify-start gap-2 items-center my-4 py-4">
+      <div className="w-full flex justify-start md:gap-2 gap-1 items-center md:my-4 my-2 md:py-4 py-2">
         <div
           onClick={() => history.push({ pathname: "/" })}
-          className="text-[14px] cursor-pointer font-[500] text-[#888888]"
+          className="text-[12px] md:text-[14px] cursor-pointer font-[500] text-[#888888]"
         >
           Baş sahapa
         </div>
-        <RightOutlined className="text-[14px] font-[500] text-[#888888]" />
+        <RightOutlined className="text-[12px] md:text-[14px] font-[500] text-[#888888]" />
         <div
           onClick={() => history.push({ pathname: "/question" })}
-          className="text-[14px] cursor-pointer font-[500] text-[#888888]"
+          className="text-[12px] md:text-[14px] cursor-pointer font-[500] text-[#888888]"
         >
           Sorag - jogap
         </div>
       </div>
 
-      <div className="w-full mb-4 pb-4 flex justify-between">
-        <h1 className="text-[40px] font-[600] text-black">Sorag - jogap</h1>
+      <div className="w-full md:mb-4 mb-2 md:pb-4 pb-2 flex justify-between">
+        <h1 className="text-[20px] md:text-[40px] font-[600] text-black">
+          Sorag - jogap
+        </h1>
       </div>
-      <div className="w-[70%] mx-auto">
+      <div className="md:w-[70%] w-[90%] mx-auto">
         <QuestionCard />
         <QuestionCard open={true} />
         <QuestionCard />

@@ -5,6 +5,7 @@ import {
   UpOutlined,
   MinusOutlined,
 } from "@ant-design/icons";
+import lang from "../../lang/home.json";
 import { Drawer } from "antd";
 import CardCategory from "../../components/cardCategoryPage";
 import { useHistory, useParams } from "react-router-dom";

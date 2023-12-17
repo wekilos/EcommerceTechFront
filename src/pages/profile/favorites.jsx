@@ -5,6 +5,7 @@ import {
   UpOutlined,
   MinusOutlined,
 } from "@ant-design/icons";
+import lang from "../../lang/home.json";
 import CardCategory from "../../components/cardCategoryPage";
 import { useHistory } from "react-router-dom";
 import checkbox from "../../images/checkbox.svg";

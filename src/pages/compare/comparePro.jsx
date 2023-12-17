@@ -5,7 +5,7 @@ import { useHistory, useParams } from "react-router-dom";
 import { Context } from "../../context/context";
 import { BASE_URL, axiosInstance } from "../../utils/axiosIntance";
 import Card from "../../components/card";
-import { CompareAll } from "..";
+import lang from "../../lang/home.json";
 
 const ComparePro = () => {
   const history = useHistory();
@@ -252,7 +252,7 @@ const ComparePro = () => {
                 onClick={() => remove1()}
                 className="w-full relative flex gap-5 justify-between items-center"
               >
-                <div className="h-[60px] md:h-[139px] w-[60px] md:w-[109px] bg-[#F9F9F9] rounded-[6px] flex items-center justify-center">
+                <div className="h-[60px] md:h-[109px] w-[60px] md:w-[109px] bg-[#F9F9F9] rounded-[6px] flex items-center justify-center">
                   <img
                     className="h-[80%] object-contain"
                     src={
@@ -314,7 +314,7 @@ const ComparePro = () => {
                 onClick={() => remove2()}
                 className="w-full relative flex md:gap-5 gap-2 justify-between items-center"
               >
-                <div className="h-[60px] md:h-[139px] w-[60px] md:w-[109px] bg-[#F9F9F9] rounded-[6px] flex items-center justify-center">
+                <div className="h-[60px] md:h-[109px] w-[60px] md:w-[109px] bg-[#F9F9F9] rounded-[6px] flex items-center justify-center">
                   <img
                     className="h-[80%] object-contain"
                     src={
@@ -370,13 +370,13 @@ const ComparePro = () => {
             )}
           </div>
 
-          <div className="h-[139px] md:flex hidden p-4 w-[30%] cursor-pointer rounded-[10px]   justify-center items-center border-[1px] border-[#E2E2E2]">
+          <div className="h-[70px] md:h-[139px] md:flex hidden p-4 w-[30%] cursor-pointer rounded-[10px]   justify-center items-center border-[1px] border-[#E2E2E2]">
             {product3 ? (
               <div
                 onClick={() => remove3()}
                 className="w-full relative flex gap-5 justify-between items-center"
               >
-                <div className="h-[109px] w-[109px] bg-[#F9F9F9] rounded-[6px] flex items-center justify-center">
+                <div className="h-[60px] md:h-[109px] w-[60px] md:w-[109px] bg-[#F9F9F9] rounded-[6px] flex items-center justify-center">
                   <img
                     className="h-[80%] object-contain"
                     src={
